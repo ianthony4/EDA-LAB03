@@ -6,7 +6,7 @@ public class SameStack{
         Stack<Integer> h2 = new Stack<>();
         Stack<Integer> h3 = new Stack<>();
         //Llenar pilas (apilacion)
-        
+        apilar(h1,h2,h3);
     }
     public static void apilar(Stack<Integer> ha, Stack<Integer> hb, Stack<Integer> hc){
         //Llenamos la pilas con el ejemplo propuesto en el ejercicio
@@ -25,7 +25,6 @@ public class SameStack{
         hc.push(4);
         hc.push(1);
         hc.push(1);
-        
     }
 
 }
