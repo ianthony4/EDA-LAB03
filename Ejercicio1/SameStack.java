@@ -1,3 +1,4 @@
+import java.util.Stack;
 public class SameStack{
     public static void main(String[] args){
         //Creacion de las pilas
