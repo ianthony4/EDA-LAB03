@@ -8,7 +8,7 @@ public class SameStack{
         //Llenar pilas (apilacion)
         
     }
-    public static void apilar(Stack<Integer> h1, Stack<Integer> h2, Stack<Integer> h3){
+    public static void apilar(Stack<Integer> ha, Stack<Integer> hb, Stack<Integer> hc){
         //Llenamos la pilas con el ejemplo propuesto en el ejercicio
         
     }
