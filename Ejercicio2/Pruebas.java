@@ -13,6 +13,8 @@ public class Pruebas{
     libros.push("Biologia");
     System.out.println(test);
     System.out.println("Pila: " + libros);
+    String item = libros.pop();
+    System.out.println("Elemento " + item + " eliminado de " + libros);
 
   }
 }
