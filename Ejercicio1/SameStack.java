@@ -9,7 +9,17 @@ public class SameStack{
         }
         //Funcion que calculara que las alturas de los vectores sean igualews
         public static int equalStack(int[] ha, int[] hb, int[] hc){
-            return 0;
+            int rpta = 0;
+        for (int i = 0; i < ha.length; i++) {
+            for (int j = 0; j < hb.length; j++) {
+                for (int k = 0; k < hc.length; k++) {
+                    if (sumaSinElemento(ha, i) == sumaSinElemento(hb, j) && sumaSinElemento(hb, j) == sumaSinElemento(hc, k) && sumaSinElemento(ha, i) == sumaSinElemento(hc, k)) {
+                        rpta = sumaSinElemento(ha, i);
+                    }
+                }
+            }
+        }
+        return rpta;
         }
         //Funcion que deveulve la suma sin un elemento del vector
         public static int sumaSinElemento(int[] hx, int idx) {
