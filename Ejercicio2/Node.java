@@ -19,7 +19,7 @@ public class Node<T> {
   public Node<T> getNextNode(){
     return this.nextNode;
   }
-  public void setNextNode(Node nextNode){
+  public void setNextNode(Node<T> nextNode){
     this.nextNode = nextNode;
   }
 
