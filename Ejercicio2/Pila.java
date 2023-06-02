@@ -13,9 +13,17 @@ public class Pila<T> {
     Node<T> temp = temp = this.top; 
     while(temp != null) 
       temp = temp.getNextNode();
-    return temp.getData();
-      
+    return temp.getData(); 
     
+  }
+  public T pop(){
+    Node<T> temp = this.top;
+    while(temp.getNextNode() != null)
+      temp = temp.getNextNode();
+    T data = temp.getData();
+    temp.setNextNode(null);
+    return data;
+
   }
   public T push(T item){
     if(this.empty())
