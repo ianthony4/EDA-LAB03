@@ -17,11 +17,11 @@ public class Pila<T> {
     
   }
   public T pop(){
-    Node<T> temp = this.top.getNextNode();
-    while(temp.getNextNode() != null)
-      temp = temp.getNextNode();
+    Node<T> temp = this.top;
+  //  while(temp.getNextNode() != null)
+  //    temp = temp.getNextNode();
     T data = temp.getData();
-    temp = null;
+    temp = temp.getNextNode().getNextNode();
     return data;
 
   }
