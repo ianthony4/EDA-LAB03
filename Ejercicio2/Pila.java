@@ -13,7 +13,7 @@ public class Pila<T> {
     Node<T> temp = temp = this.top; 
     while(temp != null) 
       temp = temp.getNextNode();
-    return temp;
+    return temp.getData();
       
     
   }
