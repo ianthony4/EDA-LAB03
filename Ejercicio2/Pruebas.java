@@ -4,7 +4,9 @@ public class Pruebas{
     if(libros.empty())
       System.out.println("Esta vacío");
     // ingresar elmentos
-    libros.push("Calculo I");
+    String test = libros.push("Calculo I");
+    System.out.println(test);
+    System.out.println("Elemento " + test + " agregado en " + libros);
 
   }
 }

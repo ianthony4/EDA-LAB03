@@ -24,9 +24,9 @@ public class Pila<T> {
   }
   // Metodo toString
   public String toString(){
-    String res = "";
-    for(Node<T> temp = this.top; temp != null; temp.getNextNode())
+    String res = "{ ";
+    for(Node<T> temp = this.top; temp != null; temp = temp.getNextNode())
       res += temp.toString() + ", ";
-    return res;
+    return res + " }";
   }
 }
