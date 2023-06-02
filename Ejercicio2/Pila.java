@@ -25,8 +25,8 @@ public class Pila<T> {
       while(temp.getNextNode() != null)
         temp = temp.getNextNode();
       temp.setNextNode(new Node<T>(item));
-      this.count++;
     }
+    this.count++;
     // Segun los estandares de java se retorna el elemento
     return item;
   }
