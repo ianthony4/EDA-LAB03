@@ -9,6 +9,14 @@ public class Pila<T> {
   public boolean empty(){
     return this.count == 0;
   }
+  public T peek(){
+    Node<T> temp = temp = this.top; 
+    while(temp != null) 
+      temp = temp.getNextNode();
+    return temp;
+      
+    
+  }
   public T push(T item){
     if(this.empty())
       this.top = new Node<T>(item);
