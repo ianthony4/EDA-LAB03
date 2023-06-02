@@ -10,13 +10,13 @@ public class Node<T> {
     this(data, null);
   }
   // Getters y Setters
-  public E getData(){
+  public T getData(){
     return this.data;
   }
   public void setData(T data){
     this.data = data;
   }
-  public Node getNextNode(){
+  public Node<T> getNextNode(){
     return this.nextNode;
   }
   public void setNextNode(Node nextNode){
