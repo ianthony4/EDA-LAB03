@@ -23,6 +23,14 @@ public class SameStack{
             int sumaTotal = sumatorio(arrAux);
             return sumaTotal;
         }
+
+        public static int sumatorio(int[] hx) {
+            int suma = 0;
+            for (int i = 0; i < hx.length; i++) {
+                suma += hx[i];
+            }
+            return suma;
+        }
     
 
 }
