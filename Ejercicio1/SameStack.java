@@ -25,6 +25,11 @@ public class SameStack{
         hc.push(4);
         hc.push(1);
         hc.push(1);
+        //Donde ha -> h1 , etc
+        ha.toString();
+    }
+    public static int equalStack(Stack<Integer> ha, Stack<Integer> hb, Stack<Integer> hc){
+        return 0;
     }
 
 }
