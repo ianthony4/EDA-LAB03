@@ -4,7 +4,12 @@ public class SameStack{
         int[] h1 = {1,1,1,2,3};
         int[] h2 = {2,3,4};
         int[] h3 = {1,4,1,1};
+
         
+    }
+    //Funcion que calculara que las alturas de los vectores sean igualews
+    public static int equalStack(int[] ha, int[] hb, int[] hc){
+        return 0;
     }
     
 
