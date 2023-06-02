@@ -22,4 +22,11 @@ public class Pila<T> {
     // Segun los estandares de java se retorna el elemento
     return item;
   }
+  // Metodo toString
+  public String toString(){
+    String res = "";
+    for(Node<T> temp = this.top; temp != null; temp.getNextNode())
+      res += temp.toString() + ", ";
+    return res;
+  }
 }

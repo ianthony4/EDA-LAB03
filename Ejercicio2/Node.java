@@ -22,5 +22,9 @@ public class Node<T> {
   public void setNextNode(Node<T> nextNode){
     this.nextNode = nextNode;
   }
+  // Metodo toString
+  public String toString(){
+    return this.data.toString();
+  }
 
 }
