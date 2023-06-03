@@ -22,7 +22,10 @@ public class Pila<T> {
   public T push(T item){
     // Para evitar que poner items sea complejo,
     // la estructura será la siguiente para nuevos items
-    this.top = new Node<T>(item, this.top);
+    Node<T> temp = new Node<T>(item, this.top);
+    if(empty())
+      this.root = temp; // Si es el 1er item será root
+    this.top = temp;
     // Segun los estandares de java se retorna el elemento
     return item;
   }
@@ -34,6 +37,10 @@ public class Pila<T> {
     if(temp == null) // si es null, significa que no lo hayamos
       i = -1;
     return i;
+  }
+  // Metodo getRoot - raiz nodo de la Pila
+  public Node getRoot(){
+    return this.root;
   }
   // Metodo toString
   public String toString(){
