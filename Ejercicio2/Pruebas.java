@@ -1,20 +1,28 @@
 public class Pruebas{
   public static void main(String[] args){
     Pila<String> libros = new Pila<String>();
-    libros.push("Filosofia");
-    System.out.println("Pila: " + libros);
+    // Prueba metodo empty()
     if(libros.empty())
       System.out.println("Esta vacío");
-    // ingresar elmentos
+    // Prueba metodo push()
+    libros.push("Filosofia");
+    // Metodo toString()
+    System.out.println("Pila: " + libros);
+    // Ingresar elementos con push()
     String test = libros.push("Calculo I");
+    System.out.println("Elemento agregado: " + test);
+    // Metodo empty() otra prueba
     if(!libros.empty())
       System.out.println("No esta vacio");
+    // push() sin variable asignada
     libros.push("Ingles");
     libros.push("Biologia");
-    System.out.println(test);
+    // Prueba metodo peek()
     test = libros.peek();
-    System.out.println(test);
+    System.out.println("El elemento encima es " + test);
+    // Pila estado final
     System.out.println("Pila: " + libros);
+    // Pruebas metodo search()
     String element = "Calculo II";
     int index = libros.search(element);
     System.out.println(element + " esta en la posicion " + index);
@@ -27,6 +35,7 @@ public class Pruebas{
     element = "Frances";
     index = libros.search(element);
     System.out.println(element + " esta en la posicion " + index);
+    // Pruebas metodo pop()
     String item = libros.pop();
     System.out.println("Elemento " + item + " eliminado de " + libros);
     item = libros.pop();
