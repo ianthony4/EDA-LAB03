@@ -26,6 +26,15 @@ public class Pila<T> {
     // Segun los estandares de java se retorna el elemento
     return item;
   }
+  public int search(Object o){ 
+    Node<T> temp = this.top;
+    int i;
+    for(i = 1; temp != null && !temp.getData().equals(o); i++)
+      temp = temp.getNextNode();
+    if(temp == null) // si es null, significa que no lo hayamos
+      i = -1;
+    return i;
+  }
   // Metodo toString
   public String toString(){
     String res = "{ ";
