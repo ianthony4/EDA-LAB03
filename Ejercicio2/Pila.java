@@ -18,22 +18,17 @@ public class Pila<T> {
   }
   public T pop(){
     Node<T> temp = this.top;
-  //  while(temp.getNextNode() != null)
-  //    temp = temp.getNextNode();
-    T data = temp.getData();
-    temp = temp.getNextNode().getNextNode();
+    while(temp.getNextNode().getNextNode() != null)
+      temp = temp.getNextNode();
+    T data = temp.getNextNode().getData();
+    temp.setNextNode(null);
     return data;
 
   }
   public T push(T item){
-    if(this.empty())
-      this.top = new Node<T>(item);
-    else{
-      Node<T> temp = this.top;
-      while(temp.getNextNode() != null)
-        temp = temp.getNextNode();
-      temp.setNextNode(new Node<T>(item));
-    }
+    // Para evitar que la Pila sea más compleja,
+    // la estructura será la siguiente para nuevos items
+    this.top = new Node<T>(item, this.top);
     this.count++;
     // Segun los estandares de java se retorna el elemento
     return item;

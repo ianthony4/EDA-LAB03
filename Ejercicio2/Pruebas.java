@@ -15,6 +15,12 @@ public class Pruebas{
     System.out.println("Pila: " + libros);
     String item = libros.pop();
     System.out.println("Elemento " + item + " eliminado de " + libros);
+    item = libros.pop();
+    System.out.println("Elemento " + item + " eliminado de " + libros);
+    item = libros.pop();
+    System.out.println("Elemento " + item + " eliminado de " + libros);
+    item = libros.pop();
+    System.out.println("Elemento " + item + " eliminado de " + libros);
 
   }
 }
