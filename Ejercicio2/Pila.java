@@ -10,10 +10,7 @@ public class Pila<T> {
     return this.count == 0;
   }
   public T peek(){
-    Node<T> temp = temp = this.top; 
-    while(temp != null) 
-      temp = temp.getNextNode();
-    return temp.getData(); 
+    return this.top.getData(); 
     
   }
   public T pop(){
