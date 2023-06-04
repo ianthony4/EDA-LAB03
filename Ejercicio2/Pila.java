@@ -10,10 +10,14 @@ public class Pila<T> {
     return this.top == null;
   }
   public T peek(){
+    if(empty())
+      return null; // Si esta vacio se enviaria un error
     return this.top.getData(); 
     
   }
   public T pop(){
+    if(empty())
+      return null; // Si esta vacio se enviaria un error
     T temp = this.top.getData();
     this.top = this.top.getNextNode();
     return temp;
