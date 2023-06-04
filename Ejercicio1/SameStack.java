@@ -12,5 +12,10 @@ public class SameStack{
     public static int equalStack(int[] ha, int[] hb, int[] hc){
         return 0;
     }
+    //Altura incrementales, por nivel de un arreglo dado
+    public static int[] sumaxNivel(int[] h){
+    
+    }
+
 
 }
