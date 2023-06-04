@@ -11,7 +11,7 @@ public class SameStack{
     //Funcion que calculara que las alturas de los vectores sean igualews
     public static int equalStack(int[] ha, int[] hb, int[] hc){
         //definimos las sumas
-        int resultado;
+        int resultado = 0;
         //Creamos los arreglos que cuentan con una suma acumulada por cada nivel
         int[] sumA = sumaxNivel(ha);
         int[] sumB = sumaxNivel(hb);
@@ -30,7 +30,7 @@ public class SameStack{
                 }
             }
         }
-        return 0;
+        return resultado;
     }
     //Altura incrementales, por nivel de un arreglo dado
     public static int[] sumaxNivel(int[] h){
