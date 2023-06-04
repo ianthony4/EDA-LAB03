@@ -4,8 +4,7 @@ public class SameStack{
         int[] h1 = {1,1,1,2,3};
         int[] h2 = {2,3,4};
         int[] h3 = {1,4,1,1};
-        //Corregir arroja 6
-        System.out.println(equalStack(h1, h2, h3));
+        System.out.println("La altura maxima posible es de : " + equalStack(h1, h2, h3));
     }
 
     //Funcion que calculara que las alturas de los vectores sean igualews
