@@ -16,7 +16,20 @@ public class SameStack{
         int[] sumA = sumaxNivel(ha);
         int[] sumB = sumaxNivel(hb);
         int[] sumC = sumaxNivel(hc);
-        
+        //Recorremos los 3 arreglos en busca de alturas iguales
+        for(int i=0;i<sumA.length;i++){
+            for(int j=0;j<sumB.length;j++){
+                for(int k=0;k<sumC.length;k++){
+                    //cuando encuentre alturas iguales se rompe el ciclo
+                    if(sumA[i]==sumB[j]&&sumB[j]==sumC[k]){
+                        //Elejimos el indice (en esa iteracion) de cualquier arreglo
+                        //debido a que sera el mismo resultado
+                        resultado = sumA[i];
+                        break;
+                    }
+                }
+            }
+        }
         return 0;
     }
     //Altura incrementales, por nivel de un arreglo dado
