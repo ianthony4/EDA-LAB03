@@ -1,32 +1,43 @@
 package Ejercicio3;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class Cola <T>{
-    private Queue<T> elements;
+    private Node<T> elementos;
 
-    public Cola() {
-        elements = new LinkedList<>();
-    }
-
-    public boolean enqueue(T item) {
-        return elements.offer(item);
+   
+    public void enqueue(T data) {
+        Node<T> newNode = new Node<>(data);
+        if (isEmpty()) {
+            elementos = newNode;
+        } else {
+            Node<T> currentNode = elementos;
+            while (currentNode.getNextNode() != null) {
+                currentNode = currentNode.getNextNode();
+            }
+            currentNode.setNextNode(newNode);
+        }
     }
 
     public T dequeue() {
-        return elements.poll();
+        if (isEmpty()) {
+            throw new NoSuchElementException("La cola esta vacia");
+        }
+        T data = elementos.getData();
+        elementos = elementos.getNextNode();
+        return data;
     }
 
     public T peek() {
-        return elements.peek();
+        if (isEmpty()) {
+            throw new NoSuchElementException("La cola esta vacia");
+        }
+        return elementos.getData();
     }
 
     public boolean isEmpty() {
-        return elements.isEmpty();
+        return elementos == null;
     }
 
-    public int size() {
-        return elements.size();
-    }
+    
 }
