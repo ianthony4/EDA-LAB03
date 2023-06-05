@@ -3,15 +3,17 @@ package Ejercicio3;
 import java.util.*;
 
 public class Cola <T>{
-    private Node<T> elementos;
+    private Node<T> root;
 
-   
+    public Cola() {
+        this.root = null;
+    }
     public void enqueue(T data) {
         Node<T> newNode = new Node<>(data);
         if (isEmpty()) {
-            elementos = newNode;
+            root = newNode;
         } else {
-            Node<T> currentNode = elementos;
+            Node<T> currentNode = root;
             while (currentNode.getNextNode() != null) {
                 currentNode = currentNode.getNextNode();
             }
@@ -23,8 +25,8 @@ public class Cola <T>{
         if (isEmpty()) {
             throw new NoSuchElementException("La cola esta vacia");
         }
-        T data = elementos.getData();
-        elementos = elementos.getNextNode();
+        T data = root.getData();
+        root = root.getNextNode();
         return data;
     }
 
@@ -32,12 +34,12 @@ public class Cola <T>{
         if (isEmpty()) {
             throw new NoSuchElementException("La cola esta vacia");
         }
-        return elementos.getData();
+        return root.getData();
     }
 
     public boolean isEmpty() {
-        return elementos == null;
+        return root == null;
     }
-
+    
     
 }
